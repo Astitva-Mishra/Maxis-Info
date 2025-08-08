@@ -1,3 +1,4 @@
+import OurClients from "@/components/ourclients";
 import { BackgroundGradient } from "@/components/ui/background-gradient";
 import Whychoose from "@/components/whychoose";
 import React from "react";
@@ -21,6 +22,7 @@ const AboutPage = () => {
       </div>
 
      <Whychoose/>
+     <OurClients/>
 
 
       {/* CTA Section */}
