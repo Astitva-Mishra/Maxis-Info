@@ -5,101 +5,38 @@
         "title": "24×7 Managed Services Capability",
         "slug": "24x7-managed-services-capability",
         "description": "MIPL provides a true 24×7 Integrated Infrastructure Management Services encompassing remote monitoring & management services through a world class NOC, equipped with industry-proven tools, cutting-edge systems and running on robust processes complimented with on-site + on-call support.",
-        "price": "",
-        "instructor": "",
-        "isFeatured": true,
-        "image": "" 
+        "isFeatured": true
       },
       {
         "id": 2,
         "title": "Expanding Global Footprint",
         "slug": "expanding-global-footprint",
         "description": "MIPL has made its foray into the global arena with the aid of partners and subsidiaries established in the Middle East & South East Asia. Leveraging on its strengths and competencies in India, MIPL offers a complete suite of managed as well as professional services to its customers in the Middle East, Europe and South East Asia market.",
-        "price": "",
-        "instructor": "",
-        "isFeatured": true,
-        "image": "" 
+        "isFeatured": true
       },
       {
         "id": 3,
         "title": "People Excellence",
         "slug": "people-excellence",
         "description": " MIPL firmly believes that it’s the people’s abilities, knowledge, skills and merits that are instrumental in raising the quality bar and hence propagates equal opportunity employment policies. This has led to a steady increase in the ratio of women at the organization.",
-        "price": "",
-        "instructor": "",
-        "isFeatured": true,
-        "image": "" 
+        "isFeatured": true
       },
       {
         "id": 4,
         "title": "Strategic Alliances",
         "slug": "strategic-alliances",
         "description": "MIPL has strategic alliances with technology vendors of world class repute such as Hewlett Packard, Fujitsu, Avaya, Juniper, NetApp, Microsoft, VMware, Symantec, Citrix & RedHat.",
-        "price": "",
-        "instructor": "",
-        "isFeatured": true,
-        "image": ""
+        "isFeatured": true
       },
       {
         "id": 5,
         "title": "Reliability Assured",
         "slug": "reliability-assured",
         "description": "With its credibility, competence and capability, MIPL, through its structured & and process driven delivery designed to be agile and close to its client, ensures reliability and a customer experience of a very high order.",
-        "price": "",
-        "instructor": "",
-        "isFeatured": true,
-        "image": ""
-      },
-      {
-        "id": 6,
-        "title": "",
-        "slug": "",
-        "description": "",
-        "price": "",
-        "instructor": "",
-        "isFeatured": false,
-        "image": ""
-      },
-      {
-        "id": 7,
-        "title": "",
-        "slug": "",
-        "description": "",
-        "price": "",
-        "instructor": "",
-        "isFeatured": false,
-        "image": ""
-      },
-      {
-        "id": 8,
-        "title": "",
-        "slug": "",
-        "description": "",
-        "price": "",
-        "instructor": "",
-        "isFeatured": false,
-        "image": ""
-      },
-      {
-        "id": 9,
-        "title": "",
-        "slug": "",
-        "description": "",
-        "price": "",
-        "instructor": "",
-        "isFeatured": false,
-        "image": ""
-      },
-      {
-        "id": 10,
-        "title": "",
-        "slug": "",
-        "description": "",
-        "price": "",
-        "instructor": "",
-        "isFeatured": false,
-        "image": ""
-      }
+        "isFeatured": true 
+      }   
     ]
   }
+  
+
   
