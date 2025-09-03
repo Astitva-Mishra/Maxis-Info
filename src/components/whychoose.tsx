@@ -8,7 +8,6 @@ interface chooseus {
   id: number;
   title: string;
   description: string;
-   
 }
 
 function AboutPage() {
