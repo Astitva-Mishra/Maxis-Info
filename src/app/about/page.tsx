@@ -21,9 +21,8 @@ const AboutPage = () => {
         </div>
       </div>
 
-     <Whychoose/>
-     <OurClients/>
-
+      <Whychoose />
+      <OurClients />
 
       {/* CTA Section */}
       <div className="py-20 px-4 sm:px-6 lg:px-8">
