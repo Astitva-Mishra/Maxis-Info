@@ -123,42 +123,82 @@ export default function ServicesPage() {
         ))}
       </div>
 
-      
       {/* Discover the Art Section */}
       <section className="w-full py-16 bg-white">
         <div className="max-w-6xl mx-auto px-8 relative">
           {/* Background image */}
-            <div className="absolute inset-0 w-full h-full overflow-hidden">
-              <img src="/hero3.jpg" alt="Teamwork" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 w-full h-full overflow-hidden">
+            <img
+              src="/hero3.jpg"
+              alt="Teamwork"
+              className="w-full h-full object-cover"
+            />
           </div>
           <div className="relative z-10 py-12 flex flex-col items-center">
-            <span className="text-xs uppercase tracking-widest text-yellow-400 font-bold mb-2">Discover the Art</span>
-            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4 text-center max-w-3xl">Expertise: Crafting Results-Driven Campaigns For Digital Marketing</h2>
-            <p className="text-white/80 text-center max-w-2xl mb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+            <span className="text-xs uppercase tracking-widest text-yellow-400 font-bold mb-2">
+              Discover the Art
+            </span>
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4 text-center max-w-3xl">
+              Expertise: Crafting Results-Driven Campaigns For Digital Marketing
+            </h2>
+            <p className="text-white/80 text-center max-w-2xl mb-8">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
+              tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+            </p>
             <div className="flex flex-col md:flex-row gap-8 w-full justify-center items-center mt-8">
               {/* Card 1 */}
               <div className="relative w-full max-w-md">
-                <img src="/hero.jpg" alt="SEO Mastery" className="rounded-2xl w-full h-48 object-cover" />
+                <img
+                  src="/hero.jpg"
+                  alt="SEO Mastery"
+                  className="rounded-2xl w-full h-48 object-cover"
+                />
                 <div className="absolute bottom-4 left-4 bg-blue-900/90 rounded-xl p-6 shadow-lg flex items-center gap-3">
                   <span className="text-yellow-400 text-2xl">
-                    <svg width="28" height="28" fill="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" /></svg>
+                    <svg
+                      width="28"
+                      height="28"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <circle cx="12" cy="12" r="10" />
+                    </svg>
                   </span>
                   <div>
-                    <h3 className="text-lg font-bold text-white mb-1">SEO Mastery</h3>
-                    <p className="text-white/80 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <h3 className="text-lg font-bold text-white mb-1">
+                      SEO Mastery
+                    </h3>
+                    <p className="text-white/80 text-sm">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
                   </div>
                 </div>
               </div>
               {/* Card 2 */}
               <div className="relative w-full max-w-md">
-                <img src="/hero.jpg" alt="Marketing Strategy" className="rounded-2xl w-full h-48 object-cover" />
+                <img
+                  src="/hero.jpg"
+                  alt="Marketing Strategy"
+                  className="rounded-2xl w-full h-48 object-cover"
+                />
                 <div className="absolute bottom-4 left-4 bg-blue-900/90 rounded-xl p-6 shadow-lg flex items-center gap-3">
                   <span className="text-yellow-400 text-2xl">
-                    <svg width="28" height="28" fill="currentColor" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" /></svg>
+                    <svg
+                      width="28"
+                      height="28"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <rect x="6" y="6" width="12" height="12" />
+                    </svg>
                   </span>
                   <div>
-                    <h3 className="text-lg font-bold text-white mb-1">Marketing Strategy</h3>
-                    <p className="text-white/80 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <h3 className="text-lg font-bold text-white mb-1">
+                      Marketing Strategy
+                    </h3>
+                    <p className="text-white/80 text-sm">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -171,53 +211,55 @@ export default function ServicesPage() {
       <section className="w-full py-16 bg-white">
         <div className="container mx-auto px-8">
           <div className="flex flex-col md:flex-row items-center justify-center gap-12">
-        <img
-          src="/hero.jpg"
-          alt="Team"
-          className="rounded-2xl w-full max-w-xs object-cover"
-        />
-        <div className="flex-1 flex flex-col gap-6">
-          <span className="text-xs uppercase tracking-widest text-orange-400 font-bold mb-2">
-            How It Works
-          </span>
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-            Excellent Work From Increased Website Traffic To Higher Conversion
-            Rates.
-          </h2>
-          <div className="flex flex-col gap-4">
-            <div className="flex items-center gap-3">
-              <span className="text-xl font-bold text-orange-400">01.</span>
-              <div>
-                <span className="font-semibold text-gray-900">
-                  Talk With Team
-                </span>
-                <p className="text-sm text-gray-500">
-                  Lorem ipsum dolor sit amet
-                </p>
+            <img
+              src="/hero.jpg"
+              alt="Team"
+              className="rounded-2xl w-full max-w-xs object-cover"
+            />
+            <div className="flex-1 flex flex-col gap-6">
+              <span className="text-xs uppercase tracking-widest text-orange-400 font-bold mb-2">
+                How It Works
+              </span>
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+                Excellent Work From Increased Website Traffic To Higher
+                Conversion Rates.
+              </h2>
+              <div className="flex flex-col gap-4">
+                <div className="flex items-center gap-3">
+                  <span className="text-xl font-bold text-orange-400">01.</span>
+                  <div>
+                    <span className="font-semibold text-gray-900">
+                      Talk With Team
+                    </span>
+                    <p className="text-sm text-gray-500">
+                      Lorem ipsum dolor sit amet
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-3">
+                  <span className="text-xl font-bold text-orange-400">02.</span>
+                  <div>
+                    <span className="font-semibold text-gray-900">
+                      Make A Plan
+                    </span>
+                    <p className="text-sm text-gray-500">
+                      Lorem ipsum dolor sit amet
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-3">
+                  <span className="text-xl font-bold text-orange-400">03.</span>
+                  <div>
+                    <span className="font-semibold text-gray-900">
+                      Digital Marketing Work
+                    </span>
+                    <p className="text-sm text-gray-500">
+                      Lorem ipsum dolor sit amet
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
-            <div className="flex items-center gap-3">
-              <span className="text-xl font-bold text-orange-400">02.</span>
-              <div>
-                <span className="font-semibold text-gray-900">Make A Plan</span>
-                <p className="text-sm text-gray-500">
-                  Lorem ipsum dolor sit amet
-                </p>
-              </div>
-            </div>
-            <div className="flex items-center gap-3">
-              <span className="text-xl font-bold text-orange-400">03.</span>
-              <div>
-                <span className="font-semibold text-gray-900">
-                  Digital Marketing Work
-                </span>
-                <p className="text-sm text-gray-500">
-                  Lorem ipsum dolor sit amet
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
           </div>
         </div>
       </section>
@@ -226,46 +268,46 @@ export default function ServicesPage() {
       <section className="w-full py-16 bg-white">
         <div className="container mx-auto px-8">
           <div className="flex flex-col md:flex-row items-center justify-center gap-12">
-        <div className="flex-1 flex flex-col gap-6">
-          <span className="text-xs uppercase tracking-widest text-orange-400 font-bold mb-2">
-            Why Choose Us
-          </span>
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-            Discover The Reasons Why Brands Choose Us As Their Digital Marketing
-            Partner.
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-4">
-            <div className="rounded-2xl bg-gradient-to-br from-yellow-400 via-orange-300 to-yellow-200 text-white p-6 font-semibold shadow">
-              Strategic Expertise
-              <p className="text-yellow-100 text-sm font-normal mt-2">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              </p>
+            <div className="flex-1 flex flex-col gap-6">
+              <span className="text-xs uppercase tracking-widest text-orange-400 font-bold mb-2">
+                Why Choose Us
+              </span>
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+                Discover The Reasons Why Brands Choose Us As Their Digital
+                Marketing Partner.
+              </h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-4">
+                <div className="rounded-2xl bg-gradient-to-br from-yellow-400 via-orange-300 to-yellow-200 text-white p-6 font-semibold shadow">
+                  Strategic Expertise
+                  <p className="text-yellow-100 text-sm font-normal mt-2">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  </p>
+                </div>
+                <div className="rounded-2xl bg-white text-gray-900 p-6 font-semibold shadow">
+                  Creative Innovation
+                  <p className="text-gray-500 text-sm font-normal mt-2">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  </p>
+                </div>
+                <div className="rounded-2xl bg-white text-gray-900 p-6 font-semibold shadow">
+                  Data-Driven Results
+                  <p className="text-gray-500 text-sm font-normal mt-2">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  </p>
+                </div>
+                <div className="rounded-2xl bg-white text-gray-900 p-6 font-semibold shadow">
+                  Collaborative Partnership
+                  <p className="text-gray-500 text-sm font-normal mt-2">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  </p>
+                </div>
+              </div>
             </div>
-            <div className="rounded-2xl bg-white text-gray-900 p-6 font-semibold shadow">
-              Creative Innovation
-              <p className="text-gray-500 text-sm font-normal mt-2">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              </p>
-            </div>
-            <div className="rounded-2xl bg-white text-gray-900 p-6 font-semibold shadow">
-              Data-Driven Results
-              <p className="text-gray-500 text-sm font-normal mt-2">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              </p>
-            </div>
-            <div className="rounded-2xl bg-white text-gray-900 p-6 font-semibold shadow">
-              Collaborative Partnership
-              <p className="text-gray-500 text-sm font-normal mt-2">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              </p>
-            </div>
-          </div>
-        </div>
-        <img
-          src="/hero.jpg"
-          alt="Workspace"
-          className="rounded-2xl w-full max-w-xs object-cover"
-        />
+            <img
+              src="/hero.jpg"
+              alt="Workspace"
+              className="rounded-2xl w-full max-w-xs object-cover"
+            />
           </div>
         </div>
       </section>
