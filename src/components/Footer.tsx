@@ -1,10 +1,10 @@
-'use client';
-import React from 'react';
-import Link from 'next/link';
+"use client";
+import React from "react";
+import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-b from-gray-900 via-blue-900 to-black">
+    <footer className="bg-gradient-to-r from-[#143a52] via-[#17405a] to-[#1a4662]">
       {/* Main footer content */}
       <div className="py-8">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -28,22 +28,34 @@ const Footer = () => {
               </h3>
               <ul className="space-y-2">
                 <li>
-                  <Link href="/" className="text-xs text-gray-300 hover:text-white transition-colors duration-200">
+                  <Link
+                    href="/"
+                    className="text-xs text-gray-300 hover:text-white transition-colors duration-200"
+                  >
                     Home
                   </Link>
                 </li>
                 <li>
-                  <Link href="/about" className="text-xs text-gray-300 hover:text-white transition-colors duration-200">
+                  <Link
+                    href="/about"
+                    className="text-xs text-gray-300 hover:text-white transition-colors duration-200"
+                  >
                     About
                   </Link>
                 </li>
                 <li>
-                  <Link href="/services" className="text-xs text-gray-300 hover:text-white transition-colors duration-200">
+                  <Link
+                    href="/Services"
+                    className="text-xs text-gray-300 hover:text-white transition-colors duration-200"
+                  >
                     Services
                   </Link>
                 </li>
                 <li>
-                  <Link href="/contact" className="text-xs text-gray-300 hover:text-white transition-colors duration-200">
+                  <Link
+                    href="/contact"
+                    className="text-xs text-gray-300 hover:text-white transition-colors duration-200"
+                  >
                     Contact us
                   </Link>
                 </li>
@@ -72,15 +84,15 @@ const Footer = () => {
                 Follow us
               </h3>
               <div className="space-y-2">
-                <Link 
-                  href="https://facebook.com" 
+                <Link
+                  href="https://facebook.com"
                   target="_blank"
                   className="block text-xs text-gray-300 hover:text-white transition-colors duration-200"
                 >
                   Facebook
                 </Link>
-                <Link 
-                  href="https://linkedin.com" 
+                <Link
+                  href="https://linkedin.com"
                   target="_blank"
                   className="block text-xs text-gray-300 hover:text-white transition-colors duration-200"
                 >
@@ -94,7 +106,9 @@ const Footer = () => {
 
       {/* Copyright Section - stuck to bottom */}
       <div className="bg-black/80 text-center py-2">
-        <p className="text-xs text-gray-400">© 2022 MIPL. All rights reserved</p>
+        <p className="text-xs text-gray-400">
+          © 2022 MIPL. All rights reserved
+        </p>
       </div>
     </footer>
   );

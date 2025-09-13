@@ -3,7 +3,6 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const transition = {
-  type: "spring",
   mass: 0.5,
   damping: 11.5,
   stiffness: 100,
@@ -26,7 +25,7 @@ export const MenuItem = ({
     <div onMouseEnter={() => setActive(item)} className="relative">
       <motion.p
         transition={{ duration: 0.3 }}
-        className="cursor-pointer text-white hover:text-gray-300 font-medium"
+        className="cursor-pointer text-black hover:text-green-700 font-medium"
       >
         {item}
       </motion.p>
@@ -93,12 +92,8 @@ export const ProductItem = ({
         className="shrink-0 rounded-md shadow-2xl"
       />
       <div>
-        <h4 className="text-xl font-bold mb-1 text-white">
-          {title}
-        </h4>
-        <p className="text-neutral-300 text-sm max-w-[10rem]">
-          {description}
-        </p>
+        <h4 className="text-xl font-bold mb-1 text-white">{title}</h4>
+        <p className="text-neutral-300 text-sm max-w-[10rem]">{description}</p>
       </div>
     </a>
   );
