@@ -412,7 +412,7 @@ export default function ServicesPage() {
       >
         <div className="absolute inset-0 z-0">
           <img
-            src="http://localhost:3001/backgroundServices.png"
+            src="/backgroundServices.png"
             alt="Background"
             className="w-full h-full object-cover"
           />
