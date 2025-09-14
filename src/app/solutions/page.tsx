@@ -1,127 +1,550 @@
+"use client";
+import { useState } from "react";
 import Image from "next/image";
-import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
-import { WorldMap } from "@/components/ui/world-map";
+
+type FlipCardProps = {
+  front: React.ReactNode;
+  back: React.ReactNode;
+};
+
+function FlipCard({ front, back }: FlipCardProps) {
+  const [flipped, setFlipped] = useState(false);
+  return (
+    <div
+      className="relative cursor-pointer min-h-[340px] md:min-h-[420px] perspective flex"
+      onClick={() => setFlipped((f) => !f)}
+      style={{ width: "100%" }}
+    >
+      <div
+        className={`relative w-full h-full transition-transform duration-500 ease-in-out [transform-style:preserve-3d] ${
+          flipped ? "[transform:rotateY(180deg)]" : ""
+        }`}
+      >
+        <div className="w-full h-full [backface-visibility:hidden]">
+          {front}
+        </div>
+        <div className="w-full h-full [backface-visibility:hidden] [transform:rotateY(180deg)] absolute top-0 left-0 flex items-center justify-center rounded-2xl bg-gradient-to-r from-blue-100 to-white p-8 shadow">
+          {back}
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export default function SolutionsPage() {
   return (
-    <div className="flex flex-col">
-      <div className="min-h-screen flex items-center justify-center bg-black px-4 py-16">
-        <div className="max-w-6xl w-full flex flex-col md:flex-row items-center justify-between gap-12">
-          <div className="flex-1 flex flex-col items-start justify-center text-left">
-            <h1 className="text-3xl md:text-5xl font-bold text-white mb-6">
-              Let The Work Begin!<br />with MIPL
-            </h1>
-            <p className="text-lg md:text-xl text-neutral-200 mb-10 max-w-lg">
-              Whatever the challenge, MIPL is up to it<br />
-              We’re happy to discuss your Portfolio and answer any question:
-            </p>
-            <div className="flex flex-col gap-6">
-              <HoverBorderGradient containerClassName="w-fit" className="flex items-center gap-4 text-lg font-medium">
-                <span className="inline-flex items-center justify-center w-12 h-12 rounded-full border text-black border-white bg-white">
-                  <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                    <path d="M5 12h14M13 18l6-6-6-6" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                </span>
-                For Guest
-              </HoverBorderGradient>
-              <HoverBorderGradient containerClassName="w-fit" className="flex items-center gap-4 text-lg font-medium">
-                <span className="inline-flex items-center justify-center w-12 h-12 rounded-full border text-black border-white bg-white">
-                  <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                    <path d="M5 12h14M13 18l6-6-6-6" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                </span>
-                For Existing Customer
-              </HoverBorderGradient>
-            </div>
-          </div>
-          <div className="flex-1 flex items-center justify-center">
+    <div className="bg-white min-h-screen pb-20 pt-24">
+      {/* Hero Section */}
+      <section className="max-w-6xl mx-auto px-4 pt-16 flex flex-col md:flex-row items-center gap-10">
+        <div className="flex-1 flex flex-col justify-center">
+          <h1 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
+            Step into the Future with our <br />
+            <span className="text-blue-500">Branding &amp; Identity</span>{" "}
+            Solutions
+            <br />
+            and Stay Ahead of the Curve!
+          </h1>
+          <p className="text-lg text-gray-600 mb-6">
+            Your Digital Journey Starts Here at Maixs.
+          </p>
+          <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-full shadow transition w-fit">
+            Explore &rarr;
+          </button>
+        </div>
+        <div
+          className="flex-1 grid grid-cols-2 grid-rows-2 gap-6 relative"
+          style={{ minHeight: "400px" }}
+        >
+          {/* Top Left Block */}
+          <div className="bg-indigo-100 rounded-3xl flex items-center justify-center p-6 col-span-1 row-span-1">
             <Image
-              src="/solutions_img.png"
-              alt="Solutions"
-              width={500}
-              height={500}
-              className="shadow-2xl object-contain bg-white/5"
-              priority
+              src="/caraousal2.png"
+              alt="Digital Strategy"
+              width={180}
+              height={120}
             />
+            <div className="absolute top-8 left-8 text-xs font-semibold text-indigo-600 space-x-2"></div>
           </div>
+          {/* Top Right Block */}
+          <div className="bg-green-100 rounded-3xl flex items-center justify-center p-6 col-span-1 row-span-1">
+            <Image
+              src="/caraousal3.png"
+              alt="Branding"
+              width={140}
+              height={100}
+            />
+            <div className="absolute top-8 right-8 text-xs font-semibold text-green-600 space-x-2"></div>
+          </div>
+          {/* Bottom Left Block */}
+          <div className="bg-pink-200 rounded-3xl flex items-center justify-center p-6 col-span-1 row-span-1">
+            <Image
+              src="/caraousal4.png"
+              alt="Social Media"
+              width={140}
+              height={100}
+            />
+            <div className="absolute bottom-8 left-8 text-xs font-semibold text-pink-700 space-x-2"></div>
+          </div>
+          {/* Bottom Right Block */}
+          <div className="bg-orange-100 rounded-3xl flex items-center justify-center p-6 col-span-1 row-span-1">
+            <Image
+              src="/caraousal5.png"
+              alt="App Design"
+              width={140}
+              height={100}
+            />
+            <div className="absolute bottom-8 right-8 text-xs font-semibold text-orange-600 space-x-2"></div>
+          </div>
+          {/* Center Block (person image) - absolutely positioned
+            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
+              <Image src="/aboutHero.png" alt="Person" width={180} height={180} className="rounded-2xl shadow-xl" />
+            </div> */}
         </div>
-      </div>
-      <div className="flex justify-center items-center py-16 bg-black">
-        <div className="w-full max-w-6xl">
-          <WorldMap />
-        </div>
-      </div>
-      {/* Contact Form Section */}
-      <div className="w-full bg-black py-20 px-4 flex justify-center">
-        <form className="w-full max-w-4xl mx-auto bg-black text-white rounded-lg">
-          <div className="mb-8">
-            <div className="flex items-center gap-4 mb-2">
-              <div className="flex-1 h-px bg-white/30" />
-              <span className="uppercase tracking-wider text-sm text-white/70">Investore/Entrepreneurs Questions</span>
-              <div className="flex-1 h-px bg-white/30" />
+      </section>
+
+      {/* Why Choose Us Section */}
+      <section className="max-w-6xl mx-auto px-4 mt-20">
+        <h2 className="text-2xl md:text-4xl font-bold text-center text-cyan-500 mb-12">
+          Why choose us?
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          {/* Card 1 */}
+          <div className="bg-blue-50 rounded-2xl shadow p-8 flex flex-col items-center">
+            <div className="bg-blue-200 rounded-full p-3 mb-4">
+              <svg
+                width="32"
+                height="32"
+                fill="none"
+                stroke="#2563eb"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+              >
+                <path d="M12 2v20M2 12h20" />
+              </svg>
             </div>
-            <h2 className="text-3xl md:text-5xl font-bold mb-4 mt-6">Any Questions?</h2>
-            <p className="text-white/80 font-medium mb-1">We are always open to welcome new talents</p>
-            <p className="text-white/60">Send your questions here</p>
+            <h3 className="text-lg font-bold text-gray-900 mb-2 text-center">
+              Creative Expertise
+            </h3>
+            <p className="text-gray-600 text-center text-sm">
+              Our team boasts unparalleled creativity and expertise in crafting
+              branding and identity solutions that resonate with your target
+              audience, setting your brand apart from the competition.
+            </p>
           </div>
-          <div className="mb-8">
-            <label className="block text-white/80 mb-2" htmlFor="name">Name*</label>
-            <input id="name" name="name" type="text" required className="w-full bg-transparent border-b border-white/40 focus:border-white outline-none py-2 mb-6 text-white placeholder-white/60" placeholder="" />
-            <div className="flex flex-col md:flex-row gap-6">
+          {/* Card 2 */}
+          <div className="bg-cyan-50 rounded-2xl shadow p-8 flex flex-col items-center">
+            <div className="bg-cyan-200 rounded-full p-3 mb-4">
+              <svg
+                width="32"
+                height="32"
+                fill="none"
+                stroke="#06b6d4"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+              >
+                <circle cx="12" cy="12" r="10" />
+              </svg>
+            </div>
+            <h3 className="text-lg font-bold text-gray-900 mb-2 text-center">
+              Seamless Collaboration
+            </h3>
+            <p className="text-gray-600 text-center text-sm">
+              Experience seamless collaboration with our team throughout the
+              design and interaction process, ensuring your vision is brought to
+              life with precision and excellence, every step of the way.
+            </p>
+          </div>
+          {/* Card 3 */}
+          <div className="bg-blue-50 rounded-2xl shadow p-8 flex flex-col items-center">
+            <div className="bg-blue-200 rounded-full p-3 mb-4">
+              <svg
+                width="32"
+                height="32"
+                fill="none"
+                stroke="#2563eb"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+              >
+                <rect x="6" y="6" width="12" height="12" />
+              </svg>
+            </div>
+            <h3 className="text-lg font-bold text-gray-900 mb-2 text-center">
+              Tech-forward Solutions
+            </h3>
+            <p className="text-gray-600 text-center text-sm">
+              Stay ahead of the curve with our technology-driven approach,
+              leveraging cutting-edge tools and techniques to develop bespoke
+              software solutions tailored to your unique business needs.
+            </p>
+          </div>
+          {/* Card 4 */}
+          <div className="bg-cyan-50 rounded-2xl shadow p-8 flex flex-col items-center">
+            <div className="bg-cyan-200 rounded-full p-3 mb-4">
+              <svg
+                width="32"
+                height="32"
+                fill="none"
+                stroke="#06b6d4"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+              >
+                <path d="M4 17l6-6 4 4 6-6" />
+              </svg>
+            </div>
+            <h3 className="text-lg font-bold text-gray-900 mb-2 text-center">
+              Result Oriented Approach
+            </h3>
+            <p className="text-gray-600 text-center text-sm">
+              Drive tangible results with our data-driven digital marketing
+              strategies, meticulously crafted to boost your online presence,
+              increase brand visibility, and ultimately, drive conversions and
+              growth.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Focus on the Details Block */}
+      <section className="max-w-6xl mx-auto px-4 mt-24 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          {/* Left: Large Text */}
+          <div className="flex items-center justify-center h-full">
+            <h2 className="text-5xl md:text-7xl font-extrabold text-blue-700 leading-tight tracking-tight whitespace-pre-line">
+              WE
+              <br />
+              FOCUS
+              <br />
+              ON THE
+              <br />
+              DETAILS
+            </h2>
+          </div>
+          {/* Right: Description */}
+          <div className="flex flex-col justify-center h-full">
+            <p className="text-gray-700 text-base md:text-lg mb-6">
+              We're on a mission to redefine the digital landscape through
+              innovative solutions and unparalleled expertise. Being the leading
+              provider of IT services in Kerala, we're professionals at
+              providing cutting-edge solutions that are customized to each and
+              every customer's requirements. We're focused on assisting
+              organizations to thrive in the rapidly changing digital landscape.
+            </p>
+            <p className="text-gray-700 text-base md:text-lg mb-6">
+              We have a team of talented individuals who are committed to
+              quality. From custom software development to robust IT
+              infrastructure solutions, we're here to empower your business and
+              drive success.
+            </p>
+            <span className="text-blue-900 font-bold text-lg">Team Maxis</span>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Showcase Section */}
+      <section className="max-w-6xl mx-auto px-4 mb-20 grid grid-cols-1 gap-10 relative z-10">
+        <FlipCard
+          front={
+            <div className="rounded-2xl bg-gradient-to-r from-blue-50 to-white p-8 flex flex-col md:flex-row items-center justify-between shadow min-h-[340px] md:min-h-[420px]">
               <div className="flex-1">
-                <label className="block text-white/80 mb-2" htmlFor="email">Email address *</label>
-                <input id="email" name="email" type="email" required className="w-full bg-transparent border-b border-white/40 focus:border-white outline-none py-2 mb-6 text-white placeholder-white/60" placeholder="" />
+                <h3 className="text-2xl md:text-3xl font-extrabold text-blue-900 mb-2">
+                  Data Center
+                </h3>
+                <p className="text-gray-700 mb-4">
+                  If you are planning to construct a new data center facility or
+                  retrofit an existing building for data center operations, it
+                  is highly advisable to engage the services of a professional
+                  data center consultant.
+                </p>
               </div>
+              <div className="flex-1 flex justify-end">
+                <img
+                  src="/caraousal5.png"
+                  alt="Branding & Identity"
+                  className="w-64 h-40 object-cover rounded-xl"
+                />
+              </div>
+            </div>
+          }
+          back={
+            <div className="flex flex-col h-full p-8 justify-between">
+              <div className="flex flex-row justify-between w-full mb-8">
+                <div className="w-1/2 px-2 flex flex-col items-center text-center">
+                  <h4 className="text-base font-semibold text-blue-900 mb-1">
+                    Designing & Consulting
+                  </h4>
+                  <p className="text-gray-700 text-sm">
+                    For any data center project beyond a basic server room,
+                    engaging a professional data center consultant is essential
+                    to ensure a facility that is properly designed, built, and
+                    capable of maintaining consistent uptime.
+                  </p>
+                </div>
+                <div className="w-1/2 px-2 flex flex-col items-center text-center">
+                  <h4 className="text-base font-semibold text-blue-900 mb-1">
+                    Power & Cooling
+                  </h4>
+                  <p className="text-gray-700 text-sm">
+                    As data centers become more consolidated and generate higher
+                    heat, balancing performance with cooling costs and uptime
+                    becomes critical. At MIPL, we design tailored solutions that
+                    align with your infrastructure while ensuring optimal
+                    resiliency.
+                  </p>
+                </div>
+              </div>
+              <div className="flex flex-row justify-between w-full mt-8">
+                <div className="w-1/2 px-2 flex flex-col items-center text-center">
+                  <h4 className="text-base font-semibold text-blue-900 mb-1">
+                    Business Continuity
+                  </h4>
+                  <p className="text-gray-700 text-sm">
+                    MIPL India’s Business Continuity Services identify critical
+                    dependencies and ensure uninterrupted operations under any
+                    circumstances. With our expertise, we deliver maximum uptime
+                    for both cloud-based solutions and physical infrastructures.
+                  </p>
+                </div>
+                <div className="w-1/2 px-2 flex flex-col items-center text-center">
+                  <h4 className="text-base font-semibold text-blue-900 mb-1">
+                    Consolidation
+                  </h4>
+                  <p className="text-gray-700 text-sm">
+                    Every organization strives to enhance speed and agility
+                    while minimizing the risk to its data center assets. A
+                    consolidation system that leverages advanced cloud and
+                    virtualization technologies is essential to prevent
+                    underperformance and reduce the incremental costs of asset
+                    maintenance.
+                  </p>
+                </div>
+              </div>
+            </div>
+          }
+        />
+        <FlipCard
+          front={
+            <div className="rounded-2xl bg-gradient-to-r from-white to-blue-50 p-8 flex flex-col md:flex-row items-center justify-between shadow min-h-[340px] md:min-h-[420px]">
               <div className="flex-1">
-                <label className="block text-white/80 mb-2" htmlFor="phone">Phone number *</label>
-                <input id="phone" name="phone" type="tel" required className="w-full bg-transparent border-b border-white/40 focus:border-white outline-none py-2 mb-6 text-white placeholder-white/60" placeholder="" />
+                <h3 className="text-2xl md:text-3xl font-extrabold text-cyan-600 mb-2">
+                  Network Integration
+                </h3>
+                <p className="text-gray-700 mb-4">
+                  Comprehensive network design and structuring are fundamental
+                  to ensuring seamless connectivity. From planning and
+                  development to installation and ongoing support, we provide
+                  end-to-end, reliable services to clients across diverse
+                  industries.
+                </p>
+              </div>
+              <div className="flex-1 flex justify-end">
+                <img
+                  src="/caraousal4.png"
+                  alt="Design & Interaction"
+                  className="w-64 h-40 object-cover rounded-xl"
+                />
               </div>
             </div>
-            <label className="block text-white/80 mb-2" htmlFor="message">Message</label>
-            <textarea id="message" name="message" rows={4} className="w-full bg-transparent border-b border-white/40 focus:border-white outline-none py-2 mb-6 text-white placeholder-white/60 resize-none" placeholder="" />
-          </div>
-          <div className="flex justify-end">
-            <button type="submit" className="bg-white text-black rounded-full px-10 py-3 font-medium text-lg shadow hover:bg-neutral-200 transition">Send</button>
-          </div>
-        </form>
-      </div>
-      <div className="w-full bg-black py-24 flex justify-center items-center">
-        <div className="w-full max-w-7xl grid grid-cols-1 md:grid-cols-2 gap-0  overflow-hidden shadow-2xl border border-white">
-          <div className="bg-black flex flex-col justify-between p-10 min-h-[500px] relative">
-          <h1 className="text-white md:text-4xl text-center mb-6">Our Services</h1>
-            <div className="flex flex-col items-center justify-center h-full">
-              <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-6">What MIPL’s Known For</h2>
-              <img src="/solution_left.png" alt="Business Service" className="rounded-lg mb-8 w-64 h-56 object-cover shadow-lg" />
-              <button className="flex items-center gap-3 mt-4 text-lg font-medium text-white px-6 py-3 rounded-full border border-white bg-black hover:bg-white hover:text-black transition">
-                <span className="inline-flex items-center justify-center w-10 h-10 rounded-full border border-white bg-black">
-                  <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                    <path d="M5 12h14M13 18l6-6-6-6" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                </span>
-                Business Service
-              </button>
-            </div>
-          </div>
-          <div className="bg-white flex flex-col justify-between p-10 min-h-[500px] relative">
-          <h1 className="text-black md:text-4xl text-center mb-6">Build a Career</h1>
-            <div className="flex flex-col h-full justify-between">
-              <div className="relative mb-8">
-                <img src="/solution_right.png" alt="Career" className="rounded-lg w-full h-56 object-cover opacity-60" />
-                <h2 className="absolute top-6 left-6 text-3xl md:text-4xl font-bold text-black">Looking for a Real Career?</h2>
-                <p className="absolute top-24 left-6 right-6 text-black text-base md:text-lg font-medium max-w-md">Our team is made up of passionate people who love to create. We are constantly on a look out for talented, high-performing, and enthusiastic people to join our team.</p>
+          }
+          back={
+            <div className="flex flex-col h-full p-8 justify-between">
+              <div className="flex flex-row justify-between w-full mb-8">
+                <div className="w-1/2 px-2 flex flex-col items-center text-center">
+                  <h4 className="text-base font-semibold text-cyan-600 mb-1">
+                    Network Designing Active & Passive
+                  </h4>
+                  <p className="text-gray-700 text-sm">
+                    Comprehensive network design and structuring are crucial for
+                    seamless connectivity. From design and development to
+                    installation and ongoing support, we deliver reliable,
+                    end-to-end services to clients across industries.
+                  </p>
+                </div>
+                <div className="w-1/2 px-2 flex flex-col items-center text-center">
+                  <h4 className="text-base font-semibold text-cyan-600 mb-1">
+                    IP Telephony
+                  </h4>
+                  <p className="text-gray-700 text-sm">
+                    In today’s business landscape, IP networks play a vital
+                    role, with speed, capacity, and reliability directly
+                    influencing daily operations. Choosing the right partner for
+                    network design and installation is therefore critical to
+                    long-term success.
+                  </p>
+                </div>
               </div>
-              <button className="flex items-center gap-3 mt-4 text-lg font-medium text-white px-6 py-3 rounded-full border border-black bg-black hover:bg-white hover:text-black transition">
-                <span className="inline-flex items-center justify-center w-10 h-10 rounded-full border border-white bg-black">
-                  <svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                    <path d="M5 12h14M13 18l6-6-6-6" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                </span>
-                Join now
-              </button>
+              <div className="flex flex-row justify-between w-full mt-8">
+                <div className="w-1/2 px-2 flex flex-col items-center text-center">
+                  <h4 className="text-base font-semibold text-cyan-600 mb-1">
+                    WAN Solution
+                  </h4>
+                  <p className="text-gray-700 text-sm">
+                    We specialize in seamlessly integrating diverse network
+                    services, with a strong focus on security, efficiency, and
+                    comprehensive resource management. Our end-to-end solutions
+                    are designed to align with current business environments
+                    while ensuring readiness for future upgrades.
+                  </p>
+                </div>
+                <div className="w-1/2 px-2 flex flex-col items-center text-center">
+                  <h4 className="text-base font-semibold text-cyan-600 mb-1">
+                    Wireless Network
+                  </h4>
+                  <p className="text-gray-700 text-sm">
+                    A seamless wireless network is no longer a luxury but a
+                    necessity for organizations across industries. A reliable
+                    wireless infrastructure ensures secure, widespread access to
+                    enterprise network resources, enabling greater connectivity
+                    and productivity.
+                  </p>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-      </div>
+          }
+        />
+        <FlipCard
+          front={
+            <div className="rounded-2xl bg-gradient-to-r from-blue-50 to-white p-8 flex flex-col md:flex-row items-center justify-between shadow min-h-[340px] md:min-h-[420px]">
+              <div className="flex-1">
+                <h3 className="text-2xl md:text-3xl font-extrabold text-blue-900 mb-2">
+                  Cloud Side Computing
+                </h3>
+                <p className="text-gray-700 mb-4">
+                  For every organization, IT hardware represents a significant
+                  investment. Our approach focuses on delivering a comprehensive
+                  range of solutions, including end-user infrastructure
+                  planning, deployment, and migration, to maximize value and
+                  efficiency.
+                </p>
+              </div>
+              <div className="flex-1 flex justify-end">
+                <img
+                  src="/caraousal3.png"
+                  alt="Technology"
+                  className="w-64 h-40 object-cover rounded-xl"
+                />
+              </div>
+            </div>
+          }
+          back={
+            <div className="flex flex-col h-full p-8 justify-between">
+              <div className="flex flex-row justify-between w-full mb-8">
+                <div className="w-1/3 px-2 flex flex-col items-center text-center">
+                  <h4 className="text-base font-semibold text-blue-900 mb-1">
+                    Desktops & Workstations
+                  </h4>
+                  <p className="text-gray-700 text-sm">
+                    IT hardware is a major investment for any organization. We provide end-to-end services—including planning, deployment, migration, and management—to simplify and optimize IT operations.
+                  </p>
+                </div>
+                <div className="w-1/3 px-2 flex flex-col items-center text-center">
+                  <h4 className="text-base font-semibold text-blue-900 mb-1">
+                    Mobility Solutions
+                  </h4>
+                  <p className="text-gray-700 text-sm">
+                    Our mobility solutions use leading global brands to meet modern business needs, continuously optimizing IT infrastructure and providing top-tier support from HP, Microsoft, EMC, NetApp, and more, ensuring seamless operations without mobility limitations.
+                  </p>
+                </div>
+                <div className="w-1/3 px-2 flex flex-col items-center text-center">
+                  <h4 className="text-base font-semibold text-blue-900 mb-1">
+                    Remote Client Solutions
+                  </h4>
+                  <p className="text-gray-700 text-sm">
+                    Our remote client solutions enhance compliance and security
+                    while effectively supporting offshore and outsourced teams.
+                    By centralizing computing resources in the data center, they
+                    provide improved security, streamlined manageability, and a
+                    seamless user experience.
+                  </p>
+                </div>
+              </div>
+              <div className="flex flex-row justify-center w-full mt-8">
+                <div className="w-1/2 px-2 flex flex-col items-center text-center">
+                  <h4 className="text-base font-semibold text-blue-900 mb-1">
+                    Thin Clients
+                  </h4>
+                  <p className="text-gray-700 text-sm">
+                    Our Thin Clients empower you to take full control of the
+                    cloud with ease. They enable centralized setup, monitoring,
+                    and management of any number of Thin Clients remotely from a
+                    single point.
+                  </p>
+                </div>
+                <div className="w-1/2 px-2 flex flex-col items-center text-center">
+                  <h4 className="text-base font-semibold text-blue-900 mb-1">
+                    Printers
+                  </h4>
+                  <p className="text-gray-700 text-sm">
+                    Our printer solutions encompass a wide range of leading
+                    global brands, designed to meet the growing demands of
+                    modern businesses. We continuously optimize your IT
+                    infrastructure to ensure seamless operations without being
+                    hindered by resource limitations.
+                  </p>
+                </div>
+              </div>
+            </div>
+          }
+        />
+        <FlipCard
+          front={
+            <div className="rounded-2xl bg-gradient-to-r from-white to-blue-50 p-8 flex flex-col md:flex-row items-center justify-between shadow min-h-[340px] md:min-h-[420px]">
+              <div className="flex-1">
+                <h3 className="text-2xl md:text-3xl font-extrabold text-cyan-600 mb-2">
+                  Cloud Solution
+                </h3>
+                <p className="text-gray-700 mb-4">
+                  Challenges are an inherent part of everyday business for all
+                  organizations. One of the most effective ways to address both
+                  business and technology challenges is by leveraging the
+                  expertise of cloud computing solution providers.
+                </p>
+              </div>
+              <div className="flex-1 flex justify-end">
+                <img
+                  src="/caraousal2.png"
+                  alt="Digital Marketing"
+                  className="w-64 h-40 object-cover rounded-xl"
+                />
+              </div>
+            </div>
+          }
+          back={
+            <div className="flex flex-col h-full p-8 justify-between">
+              <h3 className="text-xl font-bold text-cyan-600 mb-6 text-center">
+                More About Cloud Solution
+              </h3>
+              <div className="flex flex-row justify-between w-full mb-6">
+                <div className="w-1/2 px-4 flex flex-col items-center text-center">
+                  <h4 className="text-base font-semibold text-cyan-600 mb-1">
+                    Private Cloud Solutions
+                  </h4>
+                  <p className="text-gray-700 text-sm">
+                    A private cloud is a specialized cloud computing model that provides a secure, dedicated environment accessible only to a specific client. Like other cloud models, it delivers computing power as a service within a virtualized environment, leveraging an underlying pool of physical computing resources.
+                  </p>
+                </div>
+                <div className="w-1/2 px-4 flex flex-col items-center text-center">
+                  <h4 className="text-base font-semibold text-cyan-600 mb-1">
+                    Public Cloud Solutions
+                  </h4>
+                  <p className="text-gray-700 text-sm">
+                    The public cloud is the most familiar cloud computing model for many users, where services are delivered in a virtualized environment built on shared physical resources and accessed over a public network, such as the internet.
+                  </p>
+                </div>
+              </div>
+              <div className="flex flex-row justify-center w-full mt-6 pb-4">
+                <div className="w-2/3 px-4 flex flex-col items-center text-center">
+                  <h4 className="text-base font-semibold text-cyan-600 mb-1">
+                    Hybrid Cloud Solutions
+                  </h4>
+                  <p className="text-gray-700 text-sm">
+                    A hybrid cloud integrates dedicated physical servers and network equipment, including existing collocated IT infrastructure, with a cloud hosting platform. This approach offers businesses the flexibility, scalability, and efficiency of both private and public cloud environments.
+                  </p>
+                </div>
+              </div>
+            </div>
+          }
+        />
+      </section>
     </div>
   );
 }

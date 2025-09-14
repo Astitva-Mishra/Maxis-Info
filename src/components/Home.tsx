@@ -47,7 +47,12 @@ function Home() {
         </div>
         {/* Intro Text Above Features Section */}
         <div className="w-full flex justify-center bg-white">
-          <h1 className="text-5xl md:text-5xl font-bold text-black text-center mb-8 mt-8 tracking-tight">
+          <h1
+            className="mt-10 md:mt-16 text-4xl md:text-7xl font-bold text-center mb-8 tracking-tight text-black"
+            style={{
+              textShadow: "0 2px 12px rgba(0,0,0,0.18)",
+            }}
+          >
             Shaping the Future with Agile and Sustainable IT Solutions
           </h1>
         </div>
@@ -85,9 +90,9 @@ function Home() {
                   deliver solutions that reinvent and rebuild businesses —
                   making MIPL a trusted partner in the agile world.
                 </p>
-                <Link href="/fleet">
+                <Link href="/Services" passHref>
                   <button className="bg-green-700 hover:bg-green-800 text-white font-medium px-6 py-3 rounded-md transition-colors duration-300">
-                    <Link href="/Services">See Our Services</Link>
+                    See Our Services
                   </button>
                 </Link>
               </div>
@@ -184,9 +189,11 @@ function Home() {
                   </div>
 
                   <div className="mt-6">
-                    <button className="bg-green-700 hover:bg-green-800 text-white font-medium px-6 py-3 rounded-md transition-colors duration-300">
-                      <Link href="/solutions">See Our Solutions</Link>
-                    </button>
+                    <Link href="/solutions" passHref>
+                      <button className="bg-green-700 hover:bg-green-800 text-white font-medium px-6 py-3 rounded-md transition-colors duration-300">
+                        See Our Solutions
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -250,9 +257,11 @@ function Home() {
                 <br />
                 Your Business
               </h2>
-              <button className="bg-green-700 hover:bg-green-800 text-white font-semibold px-6 py-3 rounded-lg shadow transition">
-                <Link href="/Services">Book A Service</Link>
-              </button>
+              <Link href="/Services" passHref>
+                <button className="bg-green-700 hover:bg-green-800 text-white font-semibold px-6 py-3 rounded-lg shadow transition">
+                  Book A Service
+                </button>
+              </Link>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
               {/* Card Data */}
@@ -309,7 +318,7 @@ function Home() {
                     {card.title}
                   </h3>
                   <p className="text-sm text-gray-600 mb-4">{card.desc}</p>
-                  <Link href={card.link} className="mt-auto">
+                  <Link href={card.link} passHref className="mt-auto">
                     <button className="bg-black text-white rounded-full p-2 w-8 h-8 flex items-center justify-center">
                       <span className="text-xl">↗</span>
                     </button>
