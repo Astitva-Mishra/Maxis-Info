@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
-// Enhanced HoverBorderGradient component
+
 const HoverBorderGradient = ({ 
   children, 
   className = "", 
@@ -25,14 +25,11 @@ const HoverBorderGradient = ({
     </div>
   );
 };
-
-// Floating particles component
 const FloatingParticles = () => {
   const [particles, setParticles] = useState<
     Array<{ left: string; top: string; delay: string; duration: string }>
   >([]);
 
-  // Only run on client-side to prevent hydration mismatch
   useEffect(() => {
     const newParticles = [...Array(20)].map(() => ({
       left: `${Math.random() * 100}%`,
@@ -61,7 +58,6 @@ const FloatingParticles = () => {
   );
 };
 
-// Professional Service Card
 const ServiceCard = ({ card, index }: { card: { title: string; desc: string; link: string }; index: number }) => {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -84,7 +80,6 @@ const ServiceCard = ({ card, index }: { card: { title: string; desc: string; lin
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      {/* Gradient overlay on hover */}
       <div className="absolute inset-0 bg-gradient-to-br from-green-50/50 to-blue-50/30 rounded-2xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
       
       <div className="relative z-10">
@@ -116,7 +111,6 @@ function Home() {
   const solutionsRef = useRef(null);
   const [scrollY, setScrollY] = useState(0);
   
-  // Only update scrollY on the client side after mount
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
     window.addEventListener('scroll', handleScroll, { passive: true });
@@ -124,7 +118,6 @@ function Home() {
   }, []);
 
   useEffect(() => {
-    // Check if we're in a browser environment
     if (
       typeof window === "undefined" ||
       typeof IntersectionObserver === "undefined"
@@ -141,7 +134,6 @@ function Home() {
             if (animation) {
               target.classList.add(animation);
             }
-            // Add stagger animation to children
             const children = target.querySelectorAll("[data-stagger]");
             children.forEach((child, index) => {
               setTimeout(() => {
