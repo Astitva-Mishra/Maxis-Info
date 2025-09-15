@@ -255,6 +255,11 @@ export default function SolutionsPage() {
                   is highly advisable to engage the services of a professional
                   data center consultant.
                 </p>
+                <div className="mt-6">
+                  <span className="inline-block bg-blue-100 text-blue-700 px-4 py-2 rounded-full font-medium text-sm shadow hover:bg-blue-200 transition">
+                    Tap to see more details
+                  </span>
+                </div>
               </div>
               <div className="flex-1 flex justify-end">
                 <img
@@ -335,6 +340,11 @@ export default function SolutionsPage() {
                   end-to-end, reliable services to clients across diverse
                   industries.
                 </p>
+                <div className="mt-6">
+                  <span className="inline-block bg-blue-100 text-blue-700 px-4 py-2 rounded-full font-medium text-sm shadow hover:bg-blue-200 transition">
+                    Tap to see more details
+                  </span>
+                </div>
               </div>
               <div className="flex-1 flex justify-end">
                 <img
@@ -415,6 +425,11 @@ export default function SolutionsPage() {
                   planning, deployment, and migration, to maximize value and
                   efficiency.
                 </p>
+                <div className="mt-6">
+                  <span className="inline-block bg-blue-100 text-blue-700 px-4 py-2 rounded-full font-medium text-sm shadow hover:bg-blue-200 transition">
+                    Tap to see more details
+                  </span>
+                </div>
               </div>
               <div className="flex-1 flex justify-end">
                 <img
@@ -433,7 +448,10 @@ export default function SolutionsPage() {
                     Desktops & Workstations
                   </h4>
                   <p className="text-gray-700 text-sm">
-                    IT hardware is a major investment for any organization. We provide end-to-end services—including planning, deployment, migration, and management—to simplify and optimize IT operations.
+                    IT hardware is a major investment for any organization. We
+                    provide end-to-end services—including planning, deployment,
+                    migration, and management—to simplify and optimize IT
+                    operations.
                   </p>
                 </div>
                 <div className="w-1/3 px-2 flex flex-col items-center text-center">
@@ -441,7 +459,11 @@ export default function SolutionsPage() {
                     Mobility Solutions
                   </h4>
                   <p className="text-gray-700 text-sm">
-                    Our mobility solutions use leading global brands to meet modern business needs, continuously optimizing IT infrastructure and providing top-tier support from HP, Microsoft, EMC, NetApp, and more, ensuring seamless operations without mobility limitations.
+                    Our mobility solutions use leading global brands to meet
+                    modern business needs, continuously optimizing IT
+                    infrastructure and providing top-tier support from HP,
+                    Microsoft, EMC, NetApp, and more, ensuring seamless
+                    operations without mobility limitations.
                   </p>
                 </div>
                 <div className="w-1/3 px-2 flex flex-col items-center text-center">
@@ -498,6 +520,11 @@ export default function SolutionsPage() {
                   business and technology challenges is by leveraging the
                   expertise of cloud computing solution providers.
                 </p>
+                <div className="mt-6">
+                  <span className="inline-block bg-blue-100 text-blue-700 px-4 py-2 rounded-full font-medium text-sm shadow hover:bg-blue-200 transition">
+                    Tap to see more details
+                  </span>
+                </div>
               </div>
               <div className="flex-1 flex justify-end">
                 <img
@@ -519,7 +546,12 @@ export default function SolutionsPage() {
                     Private Cloud Solutions
                   </h4>
                   <p className="text-gray-700 text-sm">
-                    A private cloud is a specialized cloud computing model that provides a secure, dedicated environment accessible only to a specific client. Like other cloud models, it delivers computing power as a service within a virtualized environment, leveraging an underlying pool of physical computing resources.
+                    A private cloud is a specialized cloud computing model that
+                    provides a secure, dedicated environment accessible only to
+                    a specific client. Like other cloud models, it delivers
+                    computing power as a service within a virtualized
+                    environment, leveraging an underlying pool of physical
+                    computing resources.
                   </p>
                 </div>
                 <div className="w-1/2 px-4 flex flex-col items-center text-center">
@@ -527,7 +559,10 @@ export default function SolutionsPage() {
                     Public Cloud Solutions
                   </h4>
                   <p className="text-gray-700 text-sm">
-                    The public cloud is the most familiar cloud computing model for many users, where services are delivered in a virtualized environment built on shared physical resources and accessed over a public network, such as the internet.
+                    The public cloud is the most familiar cloud computing model
+                    for many users, where services are delivered in a
+                    virtualized environment built on shared physical resources
+                    and accessed over a public network, such as the internet.
                   </p>
                 </div>
               </div>
@@ -537,7 +572,11 @@ export default function SolutionsPage() {
                     Hybrid Cloud Solutions
                   </h4>
                   <p className="text-gray-700 text-sm">
-                    A hybrid cloud integrates dedicated physical servers and network equipment, including existing collocated IT infrastructure, with a cloud hosting platform. This approach offers businesses the flexibility, scalability, and efficiency of both private and public cloud environments.
+                    A hybrid cloud integrates dedicated physical servers and
+                    network equipment, including existing collocated IT
+                    infrastructure, with a cloud hosting platform. This approach
+                    offers businesses the flexibility, scalability, and
+                    efficiency of both private and public cloud environments.
                   </p>
                 </div>
               </div>

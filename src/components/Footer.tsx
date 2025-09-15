@@ -10,15 +10,12 @@ const Footer = () => {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {/* Logo Section */}
-            <div className="col-span-1">
-              <div className="flex items-center mb-2">
-                <div className="text-xl font-bold bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">
-                  maxis
-                </div>
-              </div>
-              <p className="text-xs text-gray-300 italic">
-                experience, expertise, excellence
-              </p>
+            <div className="col-span-1 flex items-center">
+              <img
+                src="/logo.png"
+                alt="Maxis Logo"
+                style={{ width: "200px", height: "auto" }}
+              />
             </div>
 
             {/* Quick Links */}
